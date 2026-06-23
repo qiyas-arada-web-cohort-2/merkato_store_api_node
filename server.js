@@ -8,6 +8,4 @@ app.use(express.json());
 
 // TODO: mount routers here
 
-app.listen(process.env.PORT, () => {
-  console.log(`Server running on port ${process.env.PORT}`);
-});
+app.use("/products", require("./src/routes/products"));
