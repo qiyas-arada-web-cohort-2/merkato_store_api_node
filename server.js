@@ -10,7 +10,7 @@ app.get("/", (req, res) => {
   res.send("hello from merkato api")
 })
 app.use("/products", require("./src/routes/products"));
-
+app.use("/auth", require("./src/routes/auth"));
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
