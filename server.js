@@ -8,6 +8,7 @@ app.use(express.json());
 
 app.use("/products", require("./src/routes/products"));
 app.use("/auth", require("./src/routes/auth"));
+app.use("/cart", require("./src/routes/cart"));
 app.listen(process.env.PORT, () => {
   console.log(`Server running on port ${process.env.PORT}`);
 });
