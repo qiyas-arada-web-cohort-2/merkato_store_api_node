@@ -11,15 +11,10 @@ npm install
 # 2. Copy .env.example to .env and fill in your values
 cp .env.example .env
 
-# 3. Create the database in pgAdmin: merkato_store
+# 3. First-time setup (creates the database if missing, runs migrations, seeds products)
+npm run db:setup
 
-# 4. Run migrations (creates all tables)
-npx prisma migrate dev --name init
-
-# 5. Seed the products
-npm run seed
-
-# 6. Start the dev server
+# 4. Start the dev server (also ensures the database exists)
 npm run dev
 ```
 
